@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>jQuery Basics</title>
+  </head>
+  <body>
+    <div class="passwordMatching">
+      <h1>1. Password Matching</h1>
+      <label for="password">
+        Password : <br />
+        <input type="text" id="password" />
+      </label>
+      <br />
+
+      <label for="confirmPassword">
+        Confirm Password : <br />
+        <input type="text" id="confirmPassword" />
+      </label>
+      <p id="message"></p>
+      <hr />
+    </div>
+
+    <!-- subtask2 (table rows color changer) -->
+    <div class="colorChanger">
+      <h1>2. Table row color changer</h1>
+      <button id="color-even">Color even rows</button>
+      <button id="color-odd">Color odd rows</button>
+
+      <table id="color-table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ABC</td>
+            <td>Maria</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Centro</td>
+            <td>Francisco</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennet</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennet</td>
+            <td>Italy</td>
+          </tr>
+          <tr>
+            <td>XYZ Trading</td>
+            <td>Bennet</td>
+            <td>India</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+    </div>
+
+    <!-- subtask 3 (empty fields) -->
+    <div class="emptyFields">
+      <h1>3. Empty Fields</h1>
+      <label for="firstName">
+        First Name : <br />
+        <input type="text" id="firstName" />
+      </label>
+      <br />
+
+      <label for="lastName">
+        Last Name : <br />
+        <input type="text" id="lastName" />
+      </label>
+      <br />
+      <br />
+      <label for="submit"><button id="emptyFieldsBtn">Submit</button></label>
+      <hr />
+    </div>
+
+    <!-- 4. Dynamic form generation -->
+    <div class="dynForm">
+      <h1>4. Dynamic Form Generation</h1>
+      <div id="dynForm-form">
+        <label for="class"
+          ><input
+            type="text"
+            name="class"
+            id="dynForm-class"
+            placeholder="Enter class"
+        /></label>
+
+        <label for="boar"
+          ><input
+            type="text"
+            name="boar"
+            id="dynForm-boar"
+            placeholder="Enter Board"
+        /></label>
+
+        <label for="marks"
+          ><input
+            type="number"
+            name="marks"
+            id="dynForm-marks"
+            placeholder="Enter marks"
+        /></label>
+
+        <label for="division"
+          ><input
+            type="text"
+            name="division"
+            id="dynForm-division"
+            placeholder="Enter division"
+        /></label>
+        <button id="dynForm-add">+</button>
+        <button id="dynForm-remove">-</button>
+      </div>
+    </div>
+    <hr />
+
+    <!-- 5. event with time in jQuery  -->
+    <h1>5. Event with time in JQuery</h1>
+    <div class="test">
+      <p>Car Details</p>
+      <p>
+        In real life, a car is an object. A car has properties like weight and
+        color, and methods like start and stop. All cars have the same
+        properties, but the property values differ from car to car.
+      </p>
+      <p>
+        All cars have the same methods, but the methods are performed at
+        different times.
+      </p>
+    </div>
+    <div class="demo">
+      <p>Food Details</p>
+      <p>The seven food categories are</p>
+      <p>
+        Vegetables, Fruits, Grains, legumes, nuts and seeds, Meat and poultry,
+        Fish and seafood, Dairy foods, Eggs
+      </p>
+      <p>
+        Food sources from animals, birds, seafood and some plants provide
+        protein that is the building blocks of cells
+      </p>
+    </div>
+    <div class="test">
+      <p>Mobile Details</p>
+      <p>
+        There are three categories of mobile phones: basic phones, feature
+        phones, and smartphones.
+      </p>
+      <p>Smartphones are equipped with a QWERTY keypad.</p>
+    </div>
+    <hr />
+    <!-- 6. image gallery -->
+    <div class="imageGallery">
+      <h1>6. Image Gallery</h1>
+      <button id="iGallery-prev">Prev</button>
+      <button id="iGallery-next">Next</button>
+      <br />
+      <br />
+      <img id="imageGallery-show" src="./img/1.jpeg" alt="img" />
+      <hr />
+    </div>
+
+    <!-- 7. Live search  -->
+    <div class="liveSearch">
+      <h1>7. Live search</h1>
+      <label for="input-box"><input id="liveSearch-text" type="text" /></label>
+      <p id="live-search"></p>
+      <hr />
+    </div>
+
+    <!-- 8. Dynamic Content -->
+    <div id="dynamicContent">
+      <h1>8. Dynamic Content</h1>
+      <h3>Products</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Size/Color</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Duffle Bag</td>
+            <td>
+              <select name="bag" id="bag">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+            </td>
+            <td id = "duffleBag">-</td>
+          </tr>
+          <tr>
+            <td>T-shirt</td>
+            <td>
+              <select name="t-shirt" id="t-shirt">
+                <option value="gray">Light Gray</option>
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+              </select>
+            </td>
+            <td id = "tShirt">-</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+    </div>
+
+    <!--9. Simple Event  -->
+    <div class="simpleEvent">
+      <h1>9. Simple Event</h1>
+      <div id="simpleEvent-popup">Click this paragraph to generate pop-up</div>
+    </div>
+    <hr>
+    <!-- 10.Dynamic list generation -->
+    <div class="subtask10">
+      <h1>10. Dynamic List Generation</h1>
+      
+      <ul id = "main-list">
+        <li>Clothes <button id = "clothes" class="subtask10__add">+</button>
+        <ul>
+          <li>T-shirt<button id = "t-shirt" class="subtask10__add">+</button></li>
+          <li>Trousers<button id = "trouser" class="subtask10__add">+</button></li>
+        </ul>
+      </li>
+        <li>Electronics<button id = "electronics" class="subtask10__add">+</button>
+        <ul>
+          <li>Mobiles<button id = "mobiles" class="subtask10__add">+</button></li>
+          <li>Tabs<button id = "tabs" class="subtask10__add">+</button></li>
+        </ul>
+      </li>
+      </ul>
+    </div>
+  </body>
+  <script src="./JS/script.js"></script>
+</html>
