@@ -51,13 +51,16 @@ $(document).ready(function () {
     });
 
     // dynamic form generation
-    $("#dynForm-add").click(function () {
-        $("#dynForm-form").clone("dynForm-form").appendTo(".dynForm");
-    })
-
-    $("#dynForm-remove").click(function () {
-        $("#dynForm-form").remove();
-    })
+    $(document).on('click','.add-form-btn', function () {
+        var newForm = $(this).parent().clone();
+        console.log(newForm);
+        newForm.find('input').val('');
+        $('#form-list').append(newForm);
+    });
+    // Delete form
+    $('#form-list').on('click', '.delete-btn', function () {
+        $(this).parent('.form-item').remove();
+    });
 
     // event with time in jQuery
     function changeColor(count) {
@@ -103,22 +106,24 @@ $(document).ready(function () {
     });
 
     // dynamic content
-    const bags = {"small" : 1000,
-                  "medium" : 2000,
-                  "large" : 3000,                
-                };
-    const shirt = {"gray" : 1200,
-                   "black" : 1500,
-                   "blue" : 1700,                
-                };
-            
-    $("#bag").click(function() {
+    const bags = {
+        "small": 1000,
+        "medium": 2000,
+        "large": 3000,
+    };
+    const shirt = {
+        "gray": 1200,
+        "black": 1500,
+        "blue": 1700,
+    };
+
+    $("#bag").click(function () {
         let size = $(this).val();
         let price = bags[size];
         $("#duffleBag").html(price);
     });
 
-    $("#t-shirt").click(function(){
+    $("#t-shirt").click(function () {
         let color = $(this).val();
         let price = shirt[color];
         $("#tShirt").html(price);
@@ -131,7 +136,7 @@ $(document).ready(function () {
     });
 
     // 10. dynamic list generation
-    $(".subtask10__add").click(function() {
+    $(".subtask10__add").click(function () {
         $(this).parent().clone(true).appendTo($(this).parent().parent())
     })
 });

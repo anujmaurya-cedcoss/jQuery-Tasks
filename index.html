@@ -95,42 +95,23 @@
     </div>
 
     <!-- 4. Dynamic form generation -->
-    <div class="dynForm">
-      <h1>4. Dynamic Form Generation</h1>
-      <div id="dynForm-form">
-        <label for="class"
-          ><input
-            type="text"
-            name="class"
-            id="dynForm-class"
-            placeholder="Enter class"
-        /></label>
 
-        <label for="boar"
-          ><input
-            type="text"
-            name="boar"
-            id="dynForm-boar"
-            placeholder="Enter Board"
-        /></label>
+    <h1>4. Dynamic Form Generation</h1>
+    <div id="form-list">
+      <div class="form-item">
+        <label for="input-1"></label>
+        <input type="text" name="class" placeholder="Enter class"/>
 
-        <label for="marks"
-          ><input
-            type="number"
-            name="marks"
-            id="dynForm-marks"
-            placeholder="Enter marks"
-        /></label>
+        <label for="input-2"></label>
+        <input type="text" name="board" placeholder="Enter Board"/>
 
-        <label for="division"
-          ><input
-            type="text"
-            name="division"
-            id="dynForm-division"
-            placeholder="Enter division"
-        /></label>
-        <button id="dynForm-add">+</button>
-        <button id="dynForm-remove">-</button>
+        <label for="input-3"></label>
+        <input type="text" name="marks" placeholder="Enter marks"/>
+
+        <label for="input-4"></label>
+        <input type="text" name="marks" placeholder="Enter division"/>
+        <button class="delete-btn">-</button>
+        <button class="add-form-btn">+</button> 
       </div>
     </div>
     <hr />
@@ -211,7 +192,7 @@
                 <option value="large">Large</option>
               </select>
             </td>
-            <td id = "duffleBag">-</td>
+            <td id="duffleBag">-</td>
           </tr>
           <tr>
             <td>T-shirt</td>
@@ -222,7 +203,7 @@
                 <option value="blue">Blue</option>
               </select>
             </td>
-            <td id = "tShirt">-</td>
+            <td id="tShirt">-</td>
           </tr>
         </tbody>
       </table>
@@ -235,24 +216,32 @@
       <h1>9. Simple Event</h1>
       <div id="simpleEvent-popup">Click this paragraph to generate pop-up</div>
     </div>
-    <hr>
+    <hr />
     <!-- 10.Dynamic list generation -->
     <div class="subtask10">
       <h1>10. Dynamic List Generation</h1>
-      
-      <ul id = "main-list">
-        <li>Clothes <button id = "clothes" class="subtask10__add">+</button>
-        <ul>
-          <li>T-shirt<button id = "t-shirt" class="subtask10__add">+</button></li>
-          <li>Trousers<button id = "trouser" class="subtask10__add">+</button></li>
-        </ul>
-      </li>
-        <li>Electronics<button id = "electronics" class="subtask10__add">+</button>
-        <ul>
-          <li>Mobiles<button id = "mobiles" class="subtask10__add">+</button></li>
-          <li>Tabs<button id = "tabs" class="subtask10__add">+</button></li>
-        </ul>
-      </li>
+
+      <ul id="main-list">
+        <li>
+          Clothes <button id="clothes" class="subtask10__add">+</button>
+          <ul>
+            <li>
+              T-shirt<button id="t-shirt" class="subtask10__add">+</button>
+            </li>
+            <li>
+              Trousers<button id="trouser" class="subtask10__add">+</button>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Electronics<button id="electronics" class="subtask10__add">+</button>
+          <ul>
+            <li>
+              Mobiles<button id="mobiles" class="subtask10__add">+</button>
+            </li>
+            <li>Tabs<button id="tabs" class="subtask10__add">+</button></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </body>
